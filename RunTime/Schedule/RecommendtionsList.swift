@@ -33,45 +33,52 @@ struct RecommendtionsList: View {
         from the list.
     */
     var body: some View {
-            VStack {
-                if storeManager.events.isEmpty {
-                    MessageView(message: .events)
-                } else {
-                    List(selection: $selection) {
-                        let recommendations = createRecommendations(calendarEvents: storeManager.events)
-                        ForEach(recommendations, id: \.self) { event in
-                            VStack(alignment: .leading, spacing: 7) {
-                                Image(systemName: "figure.run")
-                                    .resizable()
-                                    .scaledToFit()
-                                    .frame(height: 50)
-                                Text(event.title).font(.title)
-                                HStack {
-                                    Text(event.startDate, style: .date)
-                                        .foregroundStyle(.primary)
-                                        .font(.caption)
-                                    Text("at")
-                                        .foregroundStyle(.primary)
-                                        .font(.caption)
-                                    Text(event.startDate, style: .time)
-                                        .foregroundStyle(.primary)
-                                        .font(.caption)
+        LinearGradient(gradient: Gradient(colors: [Color(.sRGB, red: 0.4, green: 0.9, blue: 1.0), Color.purple]), startPoint: .top, endPoint: .bottom)
+            .edgesIgnoringSafeArea(.all)
+            .overlay(
+                VStack {
+                    if storeManager.events.isEmpty {
+                        MessageView(message: .events)
+                    } else {
+                        List(selection: $selection) {
+                            let recommendations = createRecommendations(calendarEvents: storeManager.events)
+                            ForEach(recommendations, id: \.self) { event in
+                                VStack(alignment: .leading, spacing: 7) {
+                                    HStack {
+                                        Image(systemName: "figure.run")
+                                            .resizable()
+                                            .scaledToFit()
+                                            .frame(height: 50)
+                                        Text(event.title).font(.title)
+                                    }
+                                    HStack {
+                                        Text(event.startDate, style: .date)
+                                            .foregroundStyle(.primary)
+                                            .font(.caption)
+                                        Text("at")
+                                            .foregroundStyle(.primary)
+                                            .font(.caption)
+                                        Text(event.startDate, style: .time)
+                                            .foregroundStyle(.primary)
+                                            .font(.caption)
+                                    }
+                                } .swipeActions {
+                                    Button("Schedule") {
+                                        scheduleRunAction(event: event)
+                                    }
+                                    .tint(.green)
                                 }
-                            } .swipeActions {
-                                Button("Schedule") {
-                                    scheduleRunAction(event: event)
-                                }
-                                .tint(.green)
+                                .sheet(isPresented: $showEventEditViewController,
+                                       onDismiss: didDismissEventEditController, content: {
+                                    EventEditViewController(event: $selectedRunTime, eventStore: store)
+                                })
                             }
-                            .sheet(isPresented: $showEventEditViewController,
-                                   onDismiss: didDismissEventEditController, content: {
-                               EventEditViewController(event: $selectedRunTime, eventStore: store)
-                        })
                         }
+                        .environment(\.editMode, $editMode)
+                        .scrollContentBackground(.hidden)
                     }
-                    .environment(\.editMode, $editMode)
                 }
-            }
+            )
             .alertErrorMessage(message: alertMessage, title: alertTitle, isPresented: $shouldPresentError)
     }
     
