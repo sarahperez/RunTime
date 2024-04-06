@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "0E1D6216-60DC-43BF-B98B-0BBF6BC08FAD"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "41A02DA8-C0F6-4835-A5E4-9BE5DB30CE2F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RunTime/Schedule/RecommendtionsList.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "RecommendtionsList"
+            landmarkType = "14">
+            <Locations>
+               <Location
+                  uuid = "41A02DA8-C0F6-4835-A5E4-9BE5DB30CE2F - 21ea15b6f3be3c63"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "property wrapper backing initializer of RunTime.RecommendtionsList.editMode : SwiftUI.EditMode"
+                  moduleName = "RunTime"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/minuetgreenberg/Documents/RunTime/RunTime/Schedule/RecommendtionsList.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "41A02DA8-C0F6-4835-A5E4-9BE5DB30CE2F - e07c41da8c0659ac"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RunTime.RecommendtionsList.editMode.getter : SwiftUI.EditMode"
+                  moduleName = "RunTime"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/minuetgreenberg/Documents/RunTime/%3Ccompiler-generated%3E"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "26">
+               </Location>
+               <Location
+                  uuid = "41A02DA8-C0F6-4835-A5E4-9BE5DB30CE2F - 9188781f631739a0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RunTime.RecommendtionsList.editMode.setter : SwiftUI.EditMode"
+                  moduleName = "RunTime"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/minuetgreenberg/Documents/RunTime/%3Ccompiler-generated%3E"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "42">
+               </Location>
+               <Location
+                  uuid = "41A02DA8-C0F6-4835-A5E4-9BE5DB30CE2F - 9d83ac4bc7759e51"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RunTime.RecommendtionsList.editMode.modify : SwiftUI.EditMode"
+                  moduleName = "RunTime"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/minuetgreenberg/Documents/RunTime/%3Ccompiler-generated%3E"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "55">
+               </Location>
+               <Location
+                  uuid = "41A02DA8-C0F6-4835-A5E4-9BE5DB30CE2F - 41a177b27d2a8da0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RunTime.RecommendtionsList.editMode.modify : SwiftUI.EditMode with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "RunTime"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/minuetgreenberg/Documents/RunTime/%3Ccompiler-generated%3E"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "23">
+               </Location>
+               <Location
+                  uuid = "41A02DA8-C0F6-4835-A5E4-9BE5DB30CE2F - 79336d8641e1ece8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RunTime.RecommendtionsList.$editMode.getter : SwiftUI.Binding&lt;SwiftUI.EditMode&gt;"
+                  moduleName = "RunTime"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/minuetgreenberg/Documents/RunTime/%3Ccompiler-generated%3E"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "26">
+               </Location>
+               <Location
+                  uuid = "41A02DA8-C0F6-4835-A5E4-9BE5DB30CE2F - e449fb6542a66b04"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "default argument 3 of RunTime.RecommendtionsList.init(selectedRunTime: Swift.Optional&lt;__C.EKEvent&gt;, storeManager: SwiftUI.EnvironmentObject&lt;RunTime.EventStoreManager&gt;, selection: Swift.Set&lt;__C.EKEvent&gt;, editMode: SwiftUI.EditMode) -&gt; RunTime.RecommendtionsList"
+                  moduleName = "RunTime"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/minuetgreenberg/Documents/RunTime/RunTime/Schedule/RecommendtionsList.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "12">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

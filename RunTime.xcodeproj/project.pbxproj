@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		12C6C5D82BC1DAD3004DE68E /* SunData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C6C5D72BC1DAD3004DE68E /* SunData.swift */; };
 		4F0A53652BC177A800D5F6F1 /* PastRunsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F0A53642BC177A800D5F6F1 /* PastRunsView.swift */; };
+		8FCEE45F2BC1F4AF008A3FF4 /* WelcomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FCEE45E2BC1F4AF008A3FF4 /* WelcomeScreen.swift */; };
 		9659CBA22BC1089E00E27046 /* RunTimeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9659CBA12BC1089E00E27046 /* RunTimeApp.swift */; };
 		9659CBA42BC1089E00E27046 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9659CBA32BC1089E00E27046 /* ContentView.swift */; };
 		9659CBA62BC1089E00E27046 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9659CBA52BC1089E00E27046 /* Item.swift */; };
@@ -31,6 +32,7 @@
 /* Begin PBXFileReference section */
 		12C6C5D72BC1DAD3004DE68E /* SunData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SunData.swift; sourceTree = "<group>"; };
 		4F0A53642BC177A800D5F6F1 /* PastRunsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastRunsView.swift; sourceTree = "<group>"; };
+		8FCEE45E2BC1F4AF008A3FF4 /* WelcomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeScreen.swift; sourceTree = "<group>"; };
 		9659CB9E2BC1089E00E27046 /* RunTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RunTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9659CBA12BC1089E00E27046 /* RunTimeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunTimeApp.swift; sourceTree = "<group>"; };
 		9659CBA32BC1089E00E27046 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 				9659CBA32BC1089E00E27046 /* ContentView.swift */,
 				4F0A53642BC177A800D5F6F1 /* PastRunsView.swift */,
 				9659CBA52BC1089E00E27046 /* Item.swift */,
+				8FCEE45E2BC1F4AF008A3FF4 /* WelcomeScreen.swift */,
 				9659CBB82BC1259B00E27046 /* Schedule */,
 				9659CBA72BC108A000E27046 /* Assets.xcassets */,
 				9659CBAC2BC108A000E27046 /* RunTime.entitlements */,
@@ -225,6 +228,7 @@
 				9659CBA62BC1089E00E27046 /* Item.swift in Sources */,
 				4F0A53652BC177A800D5F6F1 /* PastRunsView.swift in Sources */,
 				9659CBA22BC1089E00E27046 /* RunTimeApp.swift in Sources */,
+				8FCEE45F2BC1F4AF008A3FF4 /* WelcomeScreen.swift in Sources */,
 				9659CBBF2BC1272600E27046 /* EventDataStore.swift in Sources */,
 				9659CBCB2BC16BC800E27046 /* EventDataStore+FullAccess.swift in Sources */,
 			);
@@ -355,7 +359,7 @@
 		9659CBB12BC108A000E27046 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon 1";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = RunTime/RunTime.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
@@ -388,7 +392,7 @@
 		9659CBB22BC108A000E27046 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon 1";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = RunTime/RunTime.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";

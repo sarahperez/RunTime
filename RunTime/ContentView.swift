@@ -26,13 +26,13 @@ struct ContentView: View {
                                 //Run - Header
                                 Text("Run")
                                     .font(.largeTitle)
-                                    .fontWeight(.heavy).padding(.leading,43)
+                                    .fontWeight(.bold).padding(.leading,43)
                                 //Profile
                                 Image("Minuet").resizable().aspectRatio(contentMode: .fit).frame(width: 70, height: 70).clipShape(Circle())
                                 //Time - Header
                                 Text("Time")
                                     .font(.largeTitle)
-                                    .fontWeight(.heavy)
+                                    .fontWeight(.bold)
                             
                                 //Preferences (Settings)
                                 Image(systemName: "gearshape.fill").foregroundColor(Color.black).offset(x: 5,y:-40).font(.system(size:25))
@@ -43,7 +43,7 @@ struct ContentView: View {
                                 .frame(width: 350, height: 120)
                                 .cornerRadius(15)
                                 .foregroundColor(Color.white)
-                                .shadow(radius: 10)
+                                .shadow(radius: 3)
                                 .overlay(
                                     
                                     //Inside of rectangle
@@ -88,11 +88,11 @@ struct ContentView: View {
                                     Button("") {
                                         /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/ /*@END_MENU_TOKEN@*/
                                     }
-                                    .frame(width: 160, height: 150).background(Color.white).foregroundColor(.black).cornerRadius(15).shadow(radius:10).overlay(
+                                    .frame(width: 160, height: 150).background(Color.white).foregroundColor(.black).cornerRadius(15).shadow(radius:3).overlay(
                                         Image(systemName: "calendar.badge.clock").foregroundColor(Color( red: 0.5, green: 0.7, blue: 1.0)).font(.system(size:50)).offset(y: -10)
                                         
                                     ).overlay(Text("Schedule Run").font(.headline).foregroundColor(Color.black).offset(y:40))
-                                        .padding(.trailing, 10)
+                                        .padding(.trailing, 20)
                                     
                                 }
                                 
@@ -100,7 +100,7 @@ struct ContentView: View {
                                     Button("") {
                                         /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/ /*@END_MENU_TOKEN@*/
                                     }
-                                    .frame(width: 160, height: 150).background(Color.white).foregroundColor(.black).cornerRadius(15).shadow(radius:10).overlay(
+                                    .frame(width: 160, height: 150).background(Color.white).foregroundColor(.black).cornerRadius(15).shadow(radius:3).overlay(
                                         Image(systemName: "figure.run").foregroundColor(Color(red: 0.6, green: 0.5, blue: 1.0)).font(.system(size:50)).offset(y: -10)
                                         
                                     ).overlay(Text("Past Runs").font(.headline).foregroundColor(Color.black).offset(y:40))
@@ -126,7 +126,7 @@ struct ContentView: View {
                                     }
                                 }
                                     .foregroundColor(Color.black)
-                            }.frame(width:350, height: 190).cornerRadius(15).foregroundColor(Color.white).shadow(radius:10).overlay(Text("My Upcoming Runs").offset(y:-75)).overlay(Button("See all") {
+                            }.frame(width:350, height: 190).cornerRadius(15).foregroundColor(Color.white).shadow(radius:3).overlay(Text("My Upcoming Runs").offset(y:-75)).overlay(Button("See all") {
                                 /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/ /*@END_MENU_TOKEN@*/
                             }.offset(y:75))
                             
@@ -156,7 +156,7 @@ struct ContentView: View {
                                     }
                                 }
                                 
-                            }.frame(width:350, height: 300).cornerRadius(15).foregroundColor(Color.white).shadow(radius:10).overlay(Text("Recent Friend Activity").offset(y:-130)).overlay(Button("See all") {
+                            }.frame(width:350, height: 300).cornerRadius(15).foregroundColor(Color.white).shadow(radius:3).overlay(Text("Recent Friend Activity").offset(y:-130)).overlay(Button("See all") {
                                 /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/ /*@END_MENU_TOKEN@*/
                             }.offset(y:125))
                         }
