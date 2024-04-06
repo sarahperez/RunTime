@@ -48,6 +48,7 @@ struct ContentView: View {
                                 .offset(y: 45)
                         }
                     )
+                //Schedule Run and Past Runs
                 HStack {
                         //Schedule run button
                         NavigationLink(destination: ScheduleRunView()) {
@@ -73,12 +74,19 @@ struct ContentView: View {
                 }
                     
                 }
-                        
-                
-                
+                List {
+                        Text("Run 1")
+                            .foregroundColor(Color.black)
+                        Text("Run 2")
+                            .foregroundColor(Color.black)
+                }.frame(width:350, height: 170).cornerRadius(15).foregroundColor(Color.white).shadow(radius:10).overlay(Text("My Upcoming Runs").offset(y:-65)).overlay(Button("See all") {
+                    /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/ /*@END_MENU_TOKEN@*/
+                }.offset(y:60))
+
+                    
             }
-                .padding()
-            )
+                
+                )
         }
     }
 
