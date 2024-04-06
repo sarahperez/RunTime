@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		12C6C5D82BC1DAD3004DE68E /* SunData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C6C5D72BC1DAD3004DE68E /* SunData.swift */; };
 		4F0A53652BC177A800D5F6F1 /* PastRunsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F0A53642BC177A800D5F6F1 /* PastRunsView.swift */; };
 		9659CBA22BC1089E00E27046 /* RunTimeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9659CBA12BC1089E00E27046 /* RunTimeApp.swift */; };
 		9659CBA42BC1089E00E27046 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9659CBA32BC1089E00E27046 /* ContentView.swift */; };
@@ -27,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		12C6C5D72BC1DAD3004DE68E /* SunData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SunData.swift; sourceTree = "<group>"; };
 		4F0A53642BC177A800D5F6F1 /* PastRunsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastRunsView.swift; sourceTree = "<group>"; };
 		9659CB9E2BC1089E00E27046 /* RunTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RunTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9659CBA12BC1089E00E27046 /* RunTimeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunTimeApp.swift; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 				9659CBC62BC169CE00E27046 /* EventStoreManager.swift */,
 				9659CBCA2BC16BC800E27046 /* EventDataStore+FullAccess.swift */,
 				9659CBCC2BC16BF900E27046 /* EventStoreError.swift */,
+				12C6C5D72BC1DAD3004DE68E /* SunData.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -209,6 +212,7 @@
 				965CD43C2BC1B4EB00CE06CA /* EventEditViewController.swift in Sources */,
 				9659CBC72BC169CE00E27046 /* EventStoreManager.swift in Sources */,
 				9659CBC52BC1699D00E27046 /* EventStoreManager+FullAccess.swift in Sources */,
+				12C6C5D82BC1DAD3004DE68E /* SunData.swift in Sources */,
 				9659CBBA2BC125ED00E27046 /* CalendarAuthorizationView.swift in Sources */,
 				9659CBA42BC1089E00E27046 /* ContentView.swift in Sources */,
 				9659CBC12BC1679100E27046 /* MessageView.swift in Sources */,
