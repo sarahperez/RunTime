@@ -95,7 +95,10 @@ struct ContentView: View {
                                     
                                 }
                                 
-                                NavigationLink(destination: PastRunsView()) {
+                                NavigationLink(destination: PastRunsView().environmentObject(storeManager)
+                                    .task {
+                                        await storeManager.listenForCalendarChanges()
+                                    }) {
                                     Button("") {
                                         /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/ /*@END_MENU_TOKEN@*/
                                     }

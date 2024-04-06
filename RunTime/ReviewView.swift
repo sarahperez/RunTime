@@ -46,8 +46,6 @@ struct ReviewView: View {
         }.padding([.top, .bottom], 30)
         
         Button("Test") {
-            print("Sarah was here")
-            print(ratingSlider)
             buttonClick(e:reviewEvent, r:ratingSlider, n:value)
         }
         .frame(width: 160, height: 150)
@@ -66,7 +64,6 @@ struct ReviewView: View {
     
     func buttonClick(e:EKEvent, r:Double, n:String){
         userReviews.addReview(e:reviewEvent, r:ratingSlider, n:value)
-        print("here")
     }
 }
 
