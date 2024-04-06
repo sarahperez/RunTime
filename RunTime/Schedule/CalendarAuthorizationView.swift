@@ -29,6 +29,8 @@ struct CalendarAuthorizationView: View {
          If the user denied or restricted access, the app provides the reason.
      */
     var body: some View {
+        Label("Your RunTime Recommendations", systemImage: "figure.run.circle.fill")
+        
         NavigationStack {
             VStack {
                 switch storeManager.authorizationStatus {
@@ -49,7 +51,6 @@ struct CalendarAuthorizationView: View {
                 }
             }
             .alertErrorMessage(message: alertMessage, title: alertTitle, isPresented: $shouldPresentError)
-            .navigationTitle("Your RunTime Recommendations")
             .task {
                 do {
                     try await storeManager.setupEventStore()

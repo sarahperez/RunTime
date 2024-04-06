@@ -23,6 +23,7 @@
 		9659CBC92BC16A1000E27046 /* AlertError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9659CBC82BC16A1000E27046 /* AlertError.swift */; };
 		9659CBCB2BC16BC800E27046 /* EventDataStore+FullAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9659CBCA2BC16BC800E27046 /* EventDataStore+FullAccess.swift */; };
 		9659CBCD2BC16BF900E27046 /* EventStoreError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9659CBCC2BC16BF900E27046 /* EventStoreError.swift */; };
+		965CD43C2BC1B4EB00CE06CA /* EventEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965CD43B2BC1B4EB00CE06CA /* EventEditViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 		9659CBC82BC16A1000E27046 /* AlertError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertError.swift; sourceTree = "<group>"; };
 		9659CBCA2BC16BC800E27046 /* EventDataStore+FullAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EventDataStore+FullAccess.swift"; sourceTree = "<group>"; };
 		9659CBCC2BC16BF900E27046 /* EventStoreError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventStoreError.swift; sourceTree = "<group>"; };
+		965CD43B2BC1B4EB00CE06CA /* EventEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventEditViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 			children = (
 				9659CBB92BC125ED00E27046 /* CalendarAuthorizationView.swift */,
 				9659CBC22BC167F100E27046 /* RecommendtionsList.swift */,
+				965CD43B2BC1B4EB00CE06CA /* EventEditViewController.swift */,
 			);
 			path = Schedule;
 			sourceTree = "<group>";
@@ -203,6 +206,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9659CBCD2BC16BF900E27046 /* EventStoreError.swift in Sources */,
+				965CD43C2BC1B4EB00CE06CA /* EventEditViewController.swift in Sources */,
 				9659CBC72BC169CE00E27046 /* EventStoreManager.swift in Sources */,
 				9659CBC52BC1699D00E27046 /* EventStoreManager+FullAccess.swift in Sources */,
 				9659CBBA2BC125ED00E27046 /* CalendarAuthorizationView.swift in Sources */,
