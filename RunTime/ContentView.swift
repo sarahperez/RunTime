@@ -66,7 +66,7 @@ struct ContentView: View {
                             //Schedule Run and Past Runs
                             HStack {
                                 //Schedule run button
-                                NavigationLink(destination: ScheduleRunView()) {
+                                NavigationLink(destination: CalendarAuthorizationView()) {
                                     Button("") {
                                         /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/ /*@END_MENU_TOKEN@*/
                                     }
