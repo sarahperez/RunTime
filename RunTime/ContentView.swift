@@ -19,7 +19,6 @@ struct ContentView: View {
         LinearGradient(gradient: Gradient(colors: [Color(.sRGB, red: 0.4, green: 0.9, blue: 1.0), Color.purple]), startPoint: .top, endPoint: .bottom)
                 .edgesIgnoringSafeArea(.all)
                 .overlay(
-
                     ScrollView{
                         VStack(spacing:20) {
                             HStack{
@@ -96,7 +95,10 @@ struct ContentView: View {
                                     
                                 }
                                 
-                                NavigationLink(destination: PastRunsView()) {
+                                NavigationLink(destination: PastRunsView().environmentObject(storeManager)
+                                    .task {
+                                        await storeManager.listenForCalendarChanges()
+                                    }) {
                                     Button("") {
                                         /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/ /*@END_MENU_TOKEN@*/
                                     }

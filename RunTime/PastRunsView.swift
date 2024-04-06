@@ -6,52 +6,93 @@
 //
 
 import SwiftUI
-import EventKitUI
+import EventKit
 import Foundation
 
 struct Review: Identifiable {
-    let date:Date
-    let rating:Int
+    let event:EKEvent
+    let rating:Double
     let note:String
     let id = UUID()
-    
-//    init(date: Date, rating: Int, note: String) {
-//        self.date = date
-//        self.rating = rating
-//        self.note = note
-//        }
 }
 
-let formatter = DateFormatter()
+class Reviews: ObservableObject{
+    var rev = [Review]()
+    
+    func addReview(e:EKEvent, r:Double, n:String){
+        rev.append(Review(event:e, rating:r, note:n));
+        print(rev.count)
+    }
+}
 
 struct PastRunsView: View {
     
-    var Reviews = [Review(date:Date.now, rating:5, note:"good"),
-                   Review(date:Date.now, rating:0, note:"bad")]
+    //var Reviews:[Review]
+    
+    @EnvironmentObject var storeManager: EventStoreManager
+    @State private var shouldPresentError: Bool = false
+    @State private var alertMessage: String?
+    @State private var alertTitle: String?
+    @State var selection: Set<EKEvent> = []
+    @State var editMode: EditMode = .inactive
+    @State var currEvent:EKEvent? = nil
+    @StateObject var userReviews = Reviews()
     
     var body: some View {
         
-        Label("Past Runs", systemImage: "figure.run.circle.fill")
+        Label("Review your past runs", systemImage: "figure.run.circle.fill")
         
-        List() {
-            /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Content@*/Text("Content")/*@END_MENU_TOKEN@*/
-        }
         
-        Label("Reviewed Runs", systemImage: "figure.run.circle.fill")
+        if storeManager.events.isEmpty {
+            MessageView(message: .events)
+        } else {
+            List(selection: $selection) {
+                ForEach(storeManager.events, id: \.self) { event in
+                    NavigationLink(destination: ReviewView(reviewEvent: event).environmentObject(userReviews)) {
+                            HStack {
+                                Text(event.startDate, style: .date)
+                                    .foregroundStyle(.primary)
+                                    .font(.caption)
+                                Text("at")
+                                    .foregroundStyle(.primary)
+                                    .font(.caption)
+                                Text(event.startDate, style: .time)
+                                    .foregroundStyle(.primary)
+                                    .font(.caption)
+                            }
+                        }
         
-        List(Reviews) {
-            var displayNote = $0.note
-            var displayDate = $0.date
-            var displayRating = $0.rating
+                }
+                .environment(\.editMode, $editMode)
+            }
             
-            GroupBox(label: Text(formatter.string(from: displayDate))){
+            
+            Label("Reviewed Runs", systemImage: "figure.run.circle.fill")
+            
+            List(userReviews.rev) { item in
+                //unpack from list of reviewed runs
+                var displayNote = item.note
+                var event = item.event
+                var displayRating = item.rating
                 
-                Text(displayNote)
+                //make a groped box for each run
+                GroupBox(label: Text(event.startDate, style: .date)){
+    
+                    ProgressView(value: (displayRating / 5.0)){
+                        Text("Your safety rating: " + String(displayRating) + "/5")
+                    }
+    
+                    Text("Notes: " + displayNote)
+                }
             }
         }
     }
 }
 
-#Preview {
-    PastRunsView()
-}
+//struct PastRuns_Previews: PreviewProvider {
+//    static var previews: some View {
+//        PastRunsView()
+//            .environmentObject(EventStoreManager())
+//    }
+//}
+
