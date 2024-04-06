@@ -18,9 +18,11 @@ struct Review: Identifiable {
 
 class Reviews: ObservableObject{
     var rev = [Review]()
+    var reviewedSet:Set<EKEvent> = []
     
     func addReview(e:EKEvent, r:Double, n:String){
         rev.append(Review(event:e, rating:r, note:n));
+        reviewedSet.insert(e)
         print(rev.count)
     }
 }
@@ -48,7 +50,9 @@ struct PastRunsView: View {
         } else {
             List(selection: $selection) {
                 ForEach(storeManager.events, id: \.self) { event in
-                    NavigationLink(destination: ReviewView(reviewEvent: event).environmentObject(userReviews)) {
+                    
+                    if(userReviews.reviewedSet.contains(event) == false){
+                        NavigationLink(destination: ReviewView(reviewEvent: event).environmentObject(userReviews)) {
                             HStack {
                                 Text(event.startDate, style: .date)
                                     .foregroundStyle(.primary)
@@ -61,6 +65,7 @@ struct PastRunsView: View {
                                     .font(.caption)
                             }
                         }
+                    }
         
                 }
                 .environment(\.editMode, $editMode)

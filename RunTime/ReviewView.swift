@@ -45,7 +45,7 @@ struct ReviewView: View {
             TextField("Additional notes:", text: $value)
         }.padding([.top, .bottom], 30)
         
-        Button("Test") {
+        Button("Sumbit review") {
             buttonClick(e:reviewEvent, r:ratingSlider, n:value)
         }
         .frame(width: 160, height: 150)
