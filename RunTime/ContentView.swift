@@ -9,6 +9,8 @@ import SwiftUI
 import SwiftData
 
 struct ContentView: View {
+    @StateObject private var storeManager: EventStoreManager = EventStoreManager()
+    
     var body: some View {
     NavigationView {
         
@@ -50,7 +52,11 @@ struct ContentView: View {
                     )
                 HStack {
                         //Schedule run button
-                        NavigationLink(destination: ScheduleRunView()) {
+                        NavigationLink(destination: CalendarAuthorizationView()
+                            .environmentObject(storeManager)
+                            .task {
+                                await storeManager.listenForCalendarChanges()
+                            }) {
                             Button("") {
                                 /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/ /*@END_MENU_TOKEN@*/
                             }
@@ -84,7 +90,14 @@ struct ContentView: View {
 
 }
 
-#Preview {
-    ContentView()
-        .modelContainer(for: Item.self, inMemory: true)
+//#Preview {
+//    ContentView()
+//        .modelContainer(for: Item.self, inMemory: true)
+//}
+
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+            .environmentObject(EventStoreManager())
+    }
 }
