@@ -9,7 +9,11 @@
 /* Begin PBXBuildFile section */
 		12C6C5D82BC1DAD3004DE68E /* SunData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C6C5D72BC1DAD3004DE68E /* SunData.swift */; };
 		4F0A53652BC177A800D5F6F1 /* PastRunsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F0A53642BC177A800D5F6F1 /* PastRunsView.swift */; };
+<<<<<<< HEAD
 		8FCEE45F2BC1F4AF008A3FF4 /* WelcomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FCEE45E2BC1F4AF008A3FF4 /* WelcomeScreen.swift */; };
+=======
+		4F0A53672BC1B7D500D5F6F1 /* ReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F0A53662BC1B7D500D5F6F1 /* ReviewView.swift */; };
+>>>>>>> origin/main
 		9659CBA22BC1089E00E27046 /* RunTimeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9659CBA12BC1089E00E27046 /* RunTimeApp.swift */; };
 		9659CBA42BC1089E00E27046 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9659CBA32BC1089E00E27046 /* ContentView.swift */; };
 		9659CBA62BC1089E00E27046 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9659CBA52BC1089E00E27046 /* Item.swift */; };
@@ -32,7 +36,11 @@
 /* Begin PBXFileReference section */
 		12C6C5D72BC1DAD3004DE68E /* SunData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SunData.swift; sourceTree = "<group>"; };
 		4F0A53642BC177A800D5F6F1 /* PastRunsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastRunsView.swift; sourceTree = "<group>"; };
+<<<<<<< HEAD
 		8FCEE45E2BC1F4AF008A3FF4 /* WelcomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeScreen.swift; sourceTree = "<group>"; };
+=======
+		4F0A53662BC1B7D500D5F6F1 /* ReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewView.swift; sourceTree = "<group>"; };
+>>>>>>> origin/main
 		9659CB9E2BC1089E00E27046 /* RunTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RunTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9659CBA12BC1089E00E27046 /* RunTimeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunTimeApp.swift; sourceTree = "<group>"; };
 		9659CBA32BC1089E00E27046 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -89,6 +97,7 @@
 				9659CBA12BC1089E00E27046 /* RunTimeApp.swift */,
 				9659CBA32BC1089E00E27046 /* ContentView.swift */,
 				4F0A53642BC177A800D5F6F1 /* PastRunsView.swift */,
+				4F0A53662BC1B7D500D5F6F1 /* ReviewView.swift */,
 				9659CBA52BC1089E00E27046 /* Item.swift */,
 				8FCEE45E2BC1F4AF008A3FF4 /* WelcomeScreen.swift */,
 				9659CBB82BC1259B00E27046 /* Schedule */,
@@ -223,6 +232,7 @@
 				965CD43E2BC1EEED00CE06CA /* RunInformation.swift in Sources */,
 				9659CBA42BC1089E00E27046 /* ContentView.swift in Sources */,
 				9659CBC12BC1679100E27046 /* MessageView.swift in Sources */,
+				4F0A53672BC1B7D500D5F6F1 /* ReviewView.swift in Sources */,
 				9659CBC32BC167F100E27046 /* RecommendtionsList.swift in Sources */,
 				9659CBC92BC16A1000E27046 /* AlertError.swift in Sources */,
 				9659CBA62BC1089E00E27046 /* Item.swift in Sources */,
