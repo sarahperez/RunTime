@@ -59,15 +59,18 @@ struct ContentView: View {
                             
                             ).overlay(Text("Schedule Run").foregroundColor(Color.black).offset(y:40))
                                 .padding(.trailing, 15)
-                            //Past runs button
-                            Button("") {
-                                /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/ /*@END_MENU_TOKEN@*/
-                            }
-                            .frame(width: 160, height: 150).background(Color.white).foregroundColor(.black).cornerRadius(15).shadow(radius:10).overlay(
-                                Image(systemName: "figure.run").foregroundColor(Color.black).font(.system(size:50)).offset(y: -10)
-                            
-                            ).overlay(Text("Past Runs").foregroundColor(Color.black).offset(y:40))
+
                     }
+                    
+                    NavigationLink(destination: PastRunsView()) {
+                        Button("") {
+                            /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/ /*@END_MENU_TOKEN@*/
+                        }
+                        .frame(width: 160, height: 150).background(Color.white).foregroundColor(.black).cornerRadius(15).shadow(radius:10).overlay(
+                            Image(systemName: "figure.run").foregroundColor(Color.black).font(.system(size:50)).offset(y: -10)
+                        
+                        ).overlay(Text("Past Runs").foregroundColor(Color.black).offset(y:40))
+                }
                     
                 }
                         
