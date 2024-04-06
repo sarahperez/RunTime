@@ -9,6 +9,7 @@ import SwiftUI
 import SwiftData
 
 struct ContentView: View {
+    @StateObject private var sunViewModel = SunViewModel()
     @StateObject private var storeManager: EventStoreManager = EventStoreManager()
     
     var body: some View {
@@ -60,7 +61,19 @@ struct ContentView: View {
                                 .overlay(
                                     //Subheader
                                     VStack{
-                                        Text("Happy Saturday, April 6")
+                                        HStack {
+                                                                        if let sunData = sunViewModel.sunData {
+                                                                            Text("Sunrise: \(sunData.sunrise)")
+                                                                            Text("Sunset: \(sunData.sunset)")
+                                                                        } else if sunViewModel.error != nil {
+                                                                            Text("Error")
+                                                                        } else {
+                                                                            ProgressView("Fetching Sun Data...")
+                                                                        }
+                                                                    }
+                                                                    .onAppear {
+                                                                        sunViewModel.fetch()
+                                                                    }
                                             .font(.subheadline)
                                             .offset(y: 45)
                                     }
