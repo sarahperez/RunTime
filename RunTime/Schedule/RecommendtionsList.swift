@@ -33,6 +33,9 @@ struct RecommendtionsList: View {
         from the list.
     */
     var body: some View {
+        LinearGradient(gradient: Gradient(colors: [Color(.sRGB, red: 0.4, green: 0.9, blue: 1.0), Color.purple]), startPoint: .top, endPoint: .bottom)
+            .edgesIgnoringSafeArea(.all)
+            .overlay(
             VStack {
                 if storeManager.events.isEmpty {
                     MessageView(message: .events)
@@ -44,7 +47,7 @@ struct RecommendtionsList: View {
                                 Image(systemName: "figure.run")
                                     .resizable()
                                     .scaledToFit()
-                                    .frame(height: 50)
+                                    .frame(height: 30)
                                 HStack {
                                     Text(event.startDate, style: .date)
                                         .foregroundStyle(.primary)
@@ -65,11 +68,16 @@ struct RecommendtionsList: View {
                              })
                                 .tint(.green)
                             }
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                            .padding().background(Color.clear).cornerRadius(15).shadow(color: Color.black.opacity(0.2), radius: 5)
                         }
                     }
                     .environment(\.editMode, $editMode)
+                    .scrollContentBackground(.hidden)
                 }
             }
+                .cornerRadius(10)
+        )
             .alertErrorMessage(message: alertMessage, title: alertTitle, isPresented: $shouldPresentError)
     }
     
