@@ -16,7 +16,7 @@ struct ContentView: View {
     NavigationView {
         
         //Background
-        LinearGradient(gradient: Gradient(colors: [Color(.sRGB, red: 0.4, green: 0.9, blue: 1.0), Color.purple]), startPoint: .top, endPoint: .bottom)
+        LinearGradient(gradient: Gradient(colors: [Color(.sRGB, red: 1.0, green: 0.7, blue: 0.85), Color.yellow]), startPoint: .top, endPoint: .bottom)
                 .edgesIgnoringSafeArea(.all)
                 .overlay(
                     ScrollView{
@@ -48,8 +48,8 @@ struct ContentView: View {
                                     //Inside of rectangle
                                     //Header
                                     HStack {
-                                        Image(systemName: "sunrise.fill").foregroundColor(Color.yellow).font(.system(size:40))
-                                        Text("Hello, Username!")
+                                        Image(systemName: "sunrise.fill").foregroundColor(Color.yellow).font(.system(size:40)).offset(x: -15)
+                                        Text("Hello, Minuet!")
                                             .font(.title)
                                             .fontWeight(.semibold)
                                     }
