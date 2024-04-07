@@ -31,7 +31,7 @@ struct UpcomingRunsView: View {
                 MessageView(message: .events)
             } else {
                 List(selection: $selection) {
-                    var recommendations = createRecommendations(calendarEvents: storeManager.events)
+                    var recommendations = createUpcoming(calendarEvents: storeManager.events)
                     ForEach(recommendations, id: \.self) { event in
                         VStack(alignment: .leading, spacing: 7) {
                             
@@ -65,18 +65,17 @@ struct UpcomingRunsView: View {
         }
     }
     
-    func createRecommendations(calendarEvents: [EKEvent]) -> [EKEvent] {
+    func createUpcoming(calendarEvents: [EKEvent]) -> [EKEvent] {
         
         var Return = [EKEvent]()
         var currentDate = Date()
         
         calendarEvents.forEach { event in
-            if (event.startDate < currentDate && event.title.contains("Run") == true) {
+            if (event.startDate < currentDate && (event.title.contains("Run") || event.title.contains("Race"))) {
                 Return.append(event)
             }
         }
-//
-        return storeManager.events
+        return Return
     }
 }
 
