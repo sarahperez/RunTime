@@ -108,8 +108,10 @@ struct ContentView: View {
                                 
                             }
                             //My Upcoming Runs
+    
                             List {
                                 HStack{
+                                    
                                     Image(systemName: "figure.run.circle").foregroundColor(Color.pink).font(.system(size:25))
                                     
                                     VStack(alignment: .leading){
@@ -126,7 +128,14 @@ struct ContentView: View {
                                     }
                                 }
                                     .foregroundColor(Color.black)
-                            }.frame(width:350, height: 190).cornerRadius(15).foregroundColor(Color.white).shadow(radius:10).overlay(Text("My Upcoming Runs").offset(y:-75)).overlay(Button("See all") {
+                            }.frame(width:350, height: 190).cornerRadius(15).foregroundColor(Color.white).shadow(radius:10).overlay(Text("My Upcoming Runs").offset(y:-75)).overlay(VStack {
+                                NavigationLink(destination: UpcomingRunsView().environmentObject(storeManager)
+                                    .task {
+                                        await storeManager.listenForCalendarChanges()
+                                    }) {
+                                    Text("See all")
+                                }
+                                //Text("My Upcoming Runs").offset(y:-75)).overlay(Button("See all") {
                                 /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/ /*@END_MENU_TOKEN@*/
                             }.offset(y:75))
                             
