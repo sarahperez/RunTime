@@ -8,11 +8,11 @@ struct WelcomeScreenView: View {
   @State private var isShowingLogo = false
   var body: some View {
     NavigationView {
-      LinearGradient(gradient: Gradient(colors: [Color(.sRGB, red: 0.4, green: 0.9, blue: 1.0), Color.purple]), startPoint: .top, endPoint: .bottom)
+      LinearGradient(gradient: Gradient(colors: [Color(.sRGB, red: 1.0, green: 0.7, blue: 0.85), Color.yellow]), startPoint: .top, endPoint: .bottom)
         .edgesIgnoringSafeArea(.all)
         .overlay(
           VStack{
-            Image("RunTime Logo")
+            Image("Image")
               .resizable(capInsets: EdgeInsets(), resizingMode: .stretch)
               .frame(width: 300.0, height: 300.0)
             Text("tap anywhere to start").offset(y: 170)
