@@ -95,13 +95,13 @@
 				4F0A53642BC177A800D5F6F1 /* PastRunsView.swift */,
 				4F0A53662BC1B7D500D5F6F1 /* ReviewView.swift */,
 				9659CBA52BC1089E00E27046 /* Item.swift */,
+				96439E152BC2151400885300 /* WelcomeScreenView.swift */,
 				9659CBB82BC1259B00E27046 /* Schedule */,
 				9659CBA72BC108A000E27046 /* Assets.xcassets */,
 				9659CBAC2BC108A000E27046 /* RunTime.entitlements */,
 				9659CBAD2BC108A000E27046 /* Info.plist */,
 				9659CBB52BC1231B00E27046 /* LICENSE */,
 				9659CBA92BC108A000E27046 /* Preview Content */,
-				96439E152BC2151400885300 /* WelcomeScreenView.swift */,
 			);
 			path = RunTime;
 			sourceTree = "<group>";
