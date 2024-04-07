@@ -44,11 +44,14 @@ struct RecommendtionsList: View {
                             let recommendations = createRecommendations(calendarEvents: storeManager.events)
                             ForEach(recommendations, id: \.self) { event in
                                 VStack(alignment: .leading, spacing: 7) {
-                                    Image(systemName: "figure.run")
-                                        .resizable()
-                                        .scaledToFit()
-                                        .frame(height: 50)
-                                    Text(event.title).font(.title)
+                                    HStack {
+                                        Image(systemName: "figure.run")
+                                            .resizable()
+                                            .scaledToFit()
+                                            .frame(height: 50)
+                                            .foregroundColor(getRunColor(runTypeTitle: event.title))
+                                        Text(event.title).font(.title)
+                                    }
                                     HStack {
                                         Text(event.startDate, style: .date)
                                             .foregroundStyle(.primary)
@@ -80,6 +83,25 @@ struct RecommendtionsList: View {
             .alertErrorMessage(message: alertMessage, title: alertTitle, isPresented: $shouldPresentError)
     }
     
+    func getRunColor(runTypeTitle: String) -> Color {
+        switch runTypeTitle {
+        case "Easy Run":
+            return .green
+        case "Moderate Run":
+            return .purple
+        case "Tempo Run":
+            return .yellow
+        case "Threshold Run":
+            return .red
+        case "Long Run":
+            return .orange
+        case "Race":
+            return .blue
+        default:
+            return .black
+        }
+    }
+    
     func didDismissEventEditController() {
         selectedRunTime = nil
     }
@@ -91,12 +113,12 @@ struct RecommendtionsList: View {
         
         for i in runCount {
             var event = EKEvent(eventStore: store)
-            var intensity = runIntensities[Int.random(in: 1..<6)]
+            var intensity = runIntensities[Int.random(in: 0..<6)]
             // get random run intensity
             
             event.title = intensity.title
-            event.startDate = Date()
-            event.endDate = Date().addingTimeInterval(TimeInterval(intensity.duration))
+            event.startDate = Date(timeIntervalSinceNow: TimeInterval(Int.random(in: 0...23400)))
+            event.endDate = event.startDate.addingTimeInterval(TimeInterval(intensity.duration))
             
             recommendations.append(event)
         }
