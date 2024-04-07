@@ -109,11 +109,21 @@ struct RecommendtionsList: View {
     func createRecommendations(calendarEvents: [EKEvent]) -> [EKEvent] {
         var recommendations: [EKEvent] = []
         let runIntensities = getRunIntensity()
-        let runCount = 1...6
+        let runCount = 1...5
         
-        for i in runCount {
-            var event = EKEvent(eventStore: store)
-            var intensity = runIntensities[Int.random(in: 0..<6)]
+        let event = EKEvent(eventStore: store)
+        let intensity = runIntensities[Int.random(in: 0..<6)]
+        // get random run intensity
+        
+        event.title = intensity.title
+        event.startDate = Date()
+        event.endDate = event.startDate.addingTimeInterval(TimeInterval(intensity.duration))
+        
+        recommendations.append(event)
+        
+        for _ in runCount {
+            let event = EKEvent(eventStore: store)
+            let intensity = runIntensities[Int.random(in: 0..<6)]
             // get random run intensity
             
             event.title = intensity.title
