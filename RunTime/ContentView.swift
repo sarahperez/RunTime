@@ -128,8 +128,13 @@ struct ContentView: View {
                                     }
                                 }
                                     .foregroundColor(Color.black)
-                            }.frame(width:350, height: 190).cornerRadius(15).foregroundColor(Color.white).shadow(radius:3).overlay(Text("My Upcoming Runs").offset(y:-75)).overlay(Button("See all") {
-                                /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/ /*@END_MENU_TOKEN@*/
+                            }.frame(width:350, height: 190).cornerRadius(15).foregroundColor(Color.white).shadow(radius:3).overlay(Text("My Upcoming Runs").offset(y:-75)).overlay(VStack {
+                                NavigationLink(destination: UpcomingRunsView().environmentObject(storeManager)
+                                    .task {
+                                        await storeManager.listenForCalendarChanges()
+                                    }) {
+                                    Text("See all")
+                                }
                             }.offset(y:75))
                             
                             List {
