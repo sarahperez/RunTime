@@ -33,6 +33,7 @@ struct PastRunsView: View {
     @StateObject var userReviews = Reviews()
     @State private var selection: Set<EKEvent> = []
     @State private var editMode: EditMode = .inactive
+    var currentDate = Date()
     
     var body: some View {
         ZStack {
@@ -48,7 +49,7 @@ struct PastRunsView: View {
                 } else {
                     List(selection: $selection) {
                         ForEach(storeManager.events, id: \.self) { event in
-                            if !userReviews.reviewedSet.contains(event) {
+                            if (!userReviews.reviewedSet.contains(event) && event.startDate < currentDate) {
                                 NavigationLink(destination: ReviewView(reviewEvent: event).environmentObject(userReviews)) {
                                     HStack {
                                         Text(event.startDate, style: .date)
