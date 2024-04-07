@@ -10,6 +10,7 @@
 		12C6C5D82BC1DAD3004DE68E /* SunData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C6C5D72BC1DAD3004DE68E /* SunData.swift */; };
 		4F0A53652BC177A800D5F6F1 /* PastRunsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F0A53642BC177A800D5F6F1 /* PastRunsView.swift */; };
 		4F0A53672BC1B7D500D5F6F1 /* ReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F0A53662BC1B7D500D5F6F1 /* ReviewView.swift */; };
+		4F0A536B2BC23E9300D5F6F1 /* UpcomingRunsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F0A536A2BC23E9300D5F6F1 /* UpcomingRunsView.swift */; };
 		96439E162BC2151400885300 /* WelcomeScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96439E152BC2151400885300 /* WelcomeScreenView.swift */; };
 		9659CBA22BC1089E00E27046 /* RunTimeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9659CBA12BC1089E00E27046 /* RunTimeApp.swift */; };
 		9659CBA42BC1089E00E27046 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9659CBA32BC1089E00E27046 /* ContentView.swift */; };
@@ -34,6 +35,7 @@
 		12C6C5D72BC1DAD3004DE68E /* SunData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SunData.swift; sourceTree = "<group>"; };
 		4F0A53642BC177A800D5F6F1 /* PastRunsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastRunsView.swift; sourceTree = "<group>"; };
 		4F0A53662BC1B7D500D5F6F1 /* ReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewView.swift; sourceTree = "<group>"; };
+		4F0A536A2BC23E9300D5F6F1 /* UpcomingRunsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingRunsView.swift; sourceTree = "<group>"; };
 		96439E152BC2151400885300 /* WelcomeScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeScreenView.swift; sourceTree = "<group>"; };
 		9659CB9E2BC1089E00E27046 /* RunTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RunTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9659CBA12BC1089E00E27046 /* RunTimeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunTimeApp.swift; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 				9659CBCC2BC16BF900E27046 /* EventStoreError.swift */,
 				12C6C5D72BC1DAD3004DE68E /* SunData.swift */,
 				965CD43D2BC1EEED00CE06CA /* RunInformation.swift */,
+				4F0A536A2BC23E9300D5F6F1 /* UpcomingRunsView.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -217,6 +220,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F0A536B2BC23E9300D5F6F1 /* UpcomingRunsView.swift in Sources */,
 				9659CBCD2BC16BF900E27046 /* EventStoreError.swift in Sources */,
 				965CD43C2BC1B4EB00CE06CA /* EventEditViewController.swift in Sources */,
 				9659CBC72BC169CE00E27046 /* EventStoreManager.swift in Sources */,
