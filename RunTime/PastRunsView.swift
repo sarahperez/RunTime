@@ -18,7 +18,7 @@ struct Review: Identifiable {
 
 class Reviews: ObservableObject{
     var rev = [Review]()
-    @Publish var reviewedSet:Set<EKEvent> = []
+    @Published var reviewedSet:Set<EKEvent> = []
     
     func addReview(e:EKEvent, r:Double, n:String){
         rev.append(Review(event:e, rating:r, note:n));
